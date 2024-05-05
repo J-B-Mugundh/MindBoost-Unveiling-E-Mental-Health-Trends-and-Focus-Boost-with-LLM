@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Distraction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here */
+        body {
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Predict Distraction</h1>
+    <form action="/predict" method="post">
+        <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="age" name="age">
+        </div>
+        <div class="mb-3">
+            <label for="freq_no_purpose" class="form-label">Frequency on Social Media (No Purpose):</label>
+            <input type="number" class="form-control" id="freq_no_purpose" name="freq_no_purpose" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="freq_distracted" class="form-label">Frequency on Social Media (Distracted):</label>
+            <input type="number" class="form-control" id="freq_distracted" name="freq_distracted" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="restless" class="form-label">Restless Without Social Media:</label>
+            <input type="number" class="form-control" id="restless" name="restless" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="worry_level" class="form-label">Worry Level:</label>
+            <input type="number" class="form-control" id="worry_level" name="worry_level" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="difficulty_concentrating" class="form-label">Difficulty Concentrating:</label>
+            <input type="number" class="form-control" id="difficulty_concentrating" name="difficulty_concentrating" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="compare_to_successful_people" class="form-label">Compare to Successful People:</label>
+            <input type="number" class="form-control" id="compare_to_successful_people" name="compare_to_successful_people" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="feelings_about_comparisons" class="form-label">Feelings About Comparisons:</label>
+            <input type="number" class="form-control" id="feelings_about_comparisons" name="feelings_about_comparisons" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="freq_seeking_validation" class="form-label">Frequency Seeking Validation:</label>
+            <input type="number" class="form-control" id="freq_seeking_validation" name="freq_seeking_validation" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="freq_feeling_depressed" class="form-label">Frequency Feeling Depressed:</label>
+            <input type="number" class="form-control" id="freq_feeling_depressed" name="freq_feeling_depressed" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="interest_fluctuation" class="form-label">Interest Fluctuation:</label>
+            <input type="number" class="form-control" id="interest_fluctuation" name="interest_fluctuation" min="1" max="5" step="1" required>
+        </div>
+        <div class="mb-3">
+            <label for="sleep_issues" class="form-label">Sleep Issues:</label>
+            <input type="number" class="form-control" id="sleep_issues" name="sleep_issues" min="1" max="5" step="1" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    <!-- Bootstrap JS (optional, for some components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
